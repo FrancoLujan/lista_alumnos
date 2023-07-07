@@ -1,0 +1,23 @@
+:root{
+    --fondo: rgb(34, 33, 33);
+
+}
+
+
+body{
+
+    background-color: var(--fondo);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top:9rem;
+}
+
+@media screen and (max-width:700px) {
+    body{
+        flex-direction: column;
+        margin-top: 3px;
+        
+    }
+    
+}

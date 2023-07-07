@@ -1,0 +1,71 @@
+.contenedor {
+  height: 30rem;
+  width: max-content;
+  padding-top: 5px;
+  background-color:rgb(34, 33, 45);;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.contenedor__formulario {
+  width: 20rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+}
+.contenedor__formulario__nombre{
+    padding-top: 18px;
+    padding-bottom: 2px;
+    padding-left: 5px;
+    margin: 5px;
+    margin-bottom: 12px;
+    text-align: start;
+    font-size: 21px;
+    border: 0.2px ridge rgb(105, 101, 101);
+    outline: none;
+    background-color: transparent;
+    color:white;
+    
+}
+.contenedor__formulario__agregar{
+    font-size: 18px;
+    margin-right: 5px;
+    background-color: rgb(134, 247, 43);
+    border-style: none;
+}
+.contenedor__formulario__eliminar{
+    font-size: 18px;
+    margin-left: 5px;
+    background-color: rgb(255, 0, 0, 0.89);
+    border-style: none
+}
+
+.contenedor__formulario__nombre:focus{
+    background-color: rgb(105, 101, 199, 0.2);
+    border: 1px ridge rgb(105, 101, 199);
+    box-shadow: 0.5px 0.8px 15px rgb(105, 101, 199),
+    -0.5px -0.8px 15px rgb(105, 101, 199);
+    transition: all 0.4s;
+}
+.contenedor__formulario__agregar:hover{
+    position: relative;
+    right: 5px;
+    transition: right 0.6s;
+
+}
+.contenedor__formulario__eliminar:hover{
+    position: relative;
+    left: 5px;
+    transition: left 0.6s;
+}
+
+
+@media screen and (max-width:700px) {
+    .contenedor{
+        margin-bottom: 31px;
+    }
+    .contenedor__formulario{
+        width: 21rem;
+    }
+}
