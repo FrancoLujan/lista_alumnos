@@ -6,6 +6,9 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  box-shadow: 0.2px 0.3px 10px rgb(34, 33, 95),
+  0.4px 0.5px 10px rgb(34, 33, 95);
+  border: 2px solid rgb(34, 33, 75)
 }
 .contenedor__formulario {
   width: 20rem;
@@ -16,8 +19,8 @@
 }
 .contenedor__formulario__nombre{
     padding-top: 18px;
-    padding-bottom: 2px;
-    padding-left: 5px;
+    padding-bottom: 4px;
+    padding-left: 7.8px;
     margin: 5px;
     margin-bottom: 12px;
     text-align: start;
@@ -44,8 +47,7 @@
 .contenedor__formulario__nombre:focus{
     background-color: rgb(105, 101, 199, 0.2);
     border: 1px ridge rgb(105, 101, 199);
-    box-shadow: 0.5px 0.8px 15px rgb(105, 101, 199),
-    -0.5px -0.8px 15px rgb(105, 101, 199);
+   
     transition: all 0.4s;
 }
 .contenedor__formulario__agregar:hover{

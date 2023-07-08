@@ -8,6 +8,8 @@
     padding-top: 5px;
     font-size: 25px;
     color: white;
+    display: flex;
+    flex-direction:column ;
 }
 .alumnos__titulo{
     color: white;
