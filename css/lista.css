@@ -12,6 +12,7 @@
     flex-direction:column ;
 }
 .alumnos__titulo{
+    font-family: 'Diphylleia', serif;
     color: white;
     position: relative;
     bottom: 35px;

@@ -5,6 +5,10 @@ const lista = document.querySelector("[date-lista]");
 let lista_nombres = [];
 
 
+function agregar_clase(nombre, etiqueta) {
+  etiqueta.classList.add(`${nombre}`);
+  
+}
 function letras(texto) {
   numeros = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
   for (i in texto) {
@@ -17,35 +21,42 @@ function letras(texto) {
 
 function agregar_alumno(campo, lista) {
   bandera = letras(campo.value);
-  let alumno = campo.value
+
+  let alumno = campo.value;
   if (campo.value != "" && bandera === true) {
-      lista.innerHTML += "<p>"+ `${alumno}` +"</p>"
-    
-    
+    lista.innerHTML += "<p>" + `${alumno}` + "</p>";
+
     lista_nombres.push(campo.value);
+    let ultimo = lista.lastChild
+    agregar_clase(alumno, ultimo);
+    campo.value = ""
+  }else{
+    error(nombre)
   }
-  campo.value = ""
+
 }
 
 function eliminar_alumno(campo, lista) {
   bandera = letras(campo.value);
-  let p = document.querySelectorAll("p");
+ 
 
   if (campo.value != "" && bandera === true) {
     text = campo.value;
+    let p = document.querySelectorAll("p")
+    encontrados = lista_nombres.filter((e) => e === text);
+    contador = 0
+    for (i = 0; i < p.length; i++) {
+      for(j = 0; j < encontrados.length ; j++){
+        if (p[i].className == encontrados[j]) {
+          p[i].remove();
+          console.log("funciono")
+        }
 
-    encontrados = lista_nombres.filter((e) => e === text)
-
-    for(i = 0; i < p.length; i++){
-      if(encontrados[i] == p[i].innerHTML){
-        lista.removeChild(p[i])
       }
-      
 
     }
-   
   }
-  campo.value = ""
+  campo.value = "";
 }
 function error(campo, bandera) {
   if (campo.value == "" || bandera == false) {
@@ -75,7 +86,6 @@ function validacion() {
 agregar.addEventListener("click", (e) => {
   e.preventDefault();
   agregar_alumno(nombre, lista);
-  error(nombre)
 
 });
 eliminar.addEventListener("click", (e) => {
