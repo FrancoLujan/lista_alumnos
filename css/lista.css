@@ -1,3 +1,13 @@
+.caja__alumnos{
+    display: flex;
+    flex-direction: column;
+    width: max-content;
+    position: relative;
+    bottom: 16.99px;
+}
+
+
+
 .alumnos{
     height: 30rem;
     width: 21rem;
@@ -10,12 +20,28 @@
     color: white;
     display: flex;
     flex-direction:column ;
+    overflow-y: scroll;
 }
+.alumnos::-webkit-scrollbar{
+    background-color:transparent;
+    width: 6px;
+    
+}
+.alumnos::-webkit-scrollbar-thumb{
+    color:transparent;
+    border: 1.2px solid white;
+    border-radius: 21px;
+}
+
 .alumnos__titulo{
     font-family: 'Diphylleia', serif;
     color: white;
-    position: relative;
-    bottom: 35px;
+    margin-bottom: 2px;
+    padding: 5px;
+    font-size: 25px;
+    margin-left: 16px;
+    text-align: center;
+
 }
 
 @media screen and (max-width:700px){
